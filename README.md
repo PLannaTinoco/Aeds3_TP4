@@ -7,16 +7,37 @@
 - Vitor de Meira  
 
 ## O que o trabalho faz?  
-Neste quarto trabalho prático da disciplina de AEDS III, implementamos uma Tabela Hash Extensível com visualização interativa. A estrutura permite inserção, busca e remoção de valores, além de operações como divisão de buckets e duplicação do diretório. A interface gráfica facilita a compreensão do funcionamento interno da tabela, exibindo os buckets, seus valores e a profundidade global/local.
+Neste quarto trabalho prático da disciplina de AEDS III, implementamos uma **Tabela Hash Extensível** com visualização interativa. A estrutura permite realizar operações como inserção, busca e remoção de valores, além de gerenciar automaticamente a divisão de buckets e duplicação do diretório conforme necessário. A interface gráfica foi projetada para facilitar a compreensão do funcionamento interno da tabela, exibindo os buckets, seus valores e as profundidades global e local.
 
-- Estrutura de dados **Tabela Hash Extensível** com suporte a:
-  - Inserção de valores  
-  - Busca de valores  
-  - Remoção de valores  
-  - Divisão de buckets quando cheios  
-  - Duplicação do diretório quando necessário  
-- Interface interativa para visualização e manipulação da tabela.  
-- Implementação em **JavaScript**, com uso de **HTML** e **CSS** para a interface.  
+### Funcionalidades principais:  
+1. **Inserção de valores**  
+   - O usuário pode inserir números na tabela. Caso o bucket correspondente esteja cheio, a tabela realiza automaticamente a divisão do bucket ou a duplicação do diretório, garantindo que o valor seja armazenado corretamente.  
+   - A interface exibe o processo de redistribuição dos valores e a atualização dos buckets.
+
+2. **Busca de valores**  
+   - O usuário pode buscar um número na tabela. A interface destaca o bucket onde o valor está armazenado, mostrando o índice do diretório correspondente.  
+   - Caso o valor não seja encontrado, uma mensagem de erro é exibida.
+
+3. **Remoção de valores**  
+   - Permite ao usuário remover um número da tabela. A interface atualiza automaticamente os buckets e o diretório após a remoção.  
+   - Não implementamos a fusão de buckets após a remoção, simplificando a lógica.
+
+4. **Divisão de buckets**  
+   - Quando um bucket está cheio e sua profundidade local é menor que a profundidade global, ele é dividido em dois. Os valores são redistribuídos entre os novos buckets com base no hash recalculado.  
+   - A interface exibe os novos buckets e os valores redistribuídos.
+
+5. **Duplicação do diretório**  
+   - Quando a profundidade local de um bucket atinge a profundidade global, o diretório é duplicado. Isso aumenta a capacidade da tabela para armazenar mais valores.  
+   - A interface reflete a duplicação do diretório, mostrando os novos índices e os buckets associados.
+
+6. **Reset da tabela**  
+   - O botão "Limpar" permite ao usuário resetar a tabela, restaurando o estado inicial com profundidade global 1 e dois buckets vazios.  
+   - A interface é atualizada para refletir o estado inicial.
+
+7. **Visualização interativa**  
+   - A interface exibe os buckets, seus valores, profundidades locais e o diretório.  
+   - Os buckets são destacados durante operações como busca e inserção, facilitando a compreensão do funcionamento da tabela.  
+   - A profundidade global é exibida em tempo real.
 
 ## Classes e principais métodos
 
