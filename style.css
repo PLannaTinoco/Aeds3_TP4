@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.controls input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+#clear-btn {
+    background-color: #dc3545;
+}
+#clear-btn:hover {
+    background-color: #a71d2a;
+}
+
+.info-panel {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+#status-message {
+    min-height: 24px;
+    font-style: italic;
+    color: #555;
+}
+
+#visualization-area {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: flex-start;
+    min-height: 400px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.directory {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 2px solid #0056b3;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.dir-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dir-index {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dir-pointer {
+    background-color: #007bff;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.buckets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.bucket {
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+.bucket.highlight {
+    border-color: #ffc107;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.7);
+}
+
+.bucket-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.bucket-id {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+.bucket-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 50px;
+}
+
+.value {
+    background-color: #17a2b8;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}

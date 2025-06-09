@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Tabela Hash Extensível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tabela Hash Extensível</h1>
+        
+        <div class="controls">
+            <input type="number" id="value-input" placeholder="Digite um número">
+            <button id="insert-btn">Inserir</button>
+            <button id="search-btn">Buscar</button>
+            <button id="remove-btn">Remover</button>
+            <button id="clear-btn">Limpar</button>
+        </div>
+
+        <div class="info-panel">
+            <p>Profundidade Global (gd): <span id="global-depth">1</span></p>
+            <p id="status-message">Insira um valor para começar.</p>
+        </div>
+        
+        <div id="visualization-area">
+            <!-- A visualização será gerada pelo JavaScript aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
