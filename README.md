@@ -63,9 +63,13 @@ Métodos internos:
 - **_doubleDirectory()**: Duplica o diretório quando a profundidade local de um bucket atinge a profundidade global.  
 
 ## Experiência  
-A implementação do TP4 foi desafiadora e enriquecedora. Conseguimos implementar todos os requisitos, incluindo a visualização interativa da tabela. O maior desafio foi garantir que a redistribuição de valores durante a divisão de buckets fosse feita corretamente, sem perder dados ou causar inconsistências. Além disso, a lógica de duplicação do diretório exigiu atenção especial para manter a integridade da estrutura.
+A conclusão deste trabalho foi uma jornada enriquecedora, que nos levou da abstração da Tabela Hash Extensível para uma visualização concreta e interativa. A aplicação, desenvolvida em HTML, CSS e JavaScript, cumpre todos os requisitos, permitindo ao usuário manipular e observar a estrutura em tempo real.
 
-Os resultados foram alcançados com sucesso. A interface interativa facilita a compreensão do funcionamento da tabela, permitindo que o usuário visualize as operações realizadas em tempo real. A experiência de desenvolvimento foi positiva, reforçando nosso entendimento sobre tabelas hash extensíveis e estruturas de dados dinâmicas.
+O principal obstáculo técnico que enfrentamos foi a implementação da rotina de divisão de buckets. O desafio não estava em criar um novo bucket, mas em orquestrar a migração dos dados. Foi preciso iterar sobre cada valor no bucket lotado, aplicar a nova máscara de bits correspondente à profundidade local atualizada e, com base nisso, decidir se o valor permaneceria no bucket original ou se migraria para o novo. Acertar essa lógica foi a chave para manter a integridade da tabela.
+
+Paralelamente, a lógica de expansão do diretório provou ser igualmente complexa. O gatilho para essa operação — um split em um bucket cuja profundidade local já alcançou a profundidade global — exigia uma sequência precisa de ações: primeiro, dobrar o array do diretório, depois, mapear a segunda metade dos ponteiros para que apontassem para os mesmos buckets que a primeira metade e, só então, realizar a divisão que originalmente causou a expansão. Essa "dança" entre ponteiros e buckets é o coração do dinamismo da tabela.
+
+Como resultado, a interface final não apenas funciona, mas também "ensina". O usuário pode, por exemplo, inserir valores sequenciais e ver um bucket se dividir sem que o diretório cresça, e depois, com um único valor estratégico, provocar a duplicação de todo o diretório. Essa experiência de desenvolvimento foi extremamente positiva, pois transformou conceitos como "profundidade global" e "profundidade local" de termos teóricos para parâmetros visuais e interativos, consolidando nosso aprendizado de forma prática.
 
 ## Checklist (respostas)
 
@@ -73,7 +77,7 @@ Os resultados foram alcançados com sucesso. A interface interativa facilita a c
   **SIM**
 
 - Há um vídeo de até 2 minutos demonstrando o uso da visualização?  
-  **SIM**
+  **NÃO**
 
 - O trabalho está funcionando corretamente?  
   **SIM**
