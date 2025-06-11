@@ -77,7 +77,8 @@ Como resultado, a interface final não apenas funciona, mas também "ensina". O 
   **SIM**
 
 - Há um vídeo de até 2 minutos demonstrando o uso da visualização?  
-  **NÃO**
+  **SIM**
+  https://youtu.be/a8NcGA44PEU
 
 - O trabalho está funcionando corretamente?  
   **SIM**
